@@ -19,7 +19,7 @@ export default async function handler(req, res) {
 
   try {
     const response = await fetch(
-      `https://data.plasmic.app/api/v1/cms/databases/${cmsId}/tables/infoCeps/rows`,
+      `https://data.plasmic.app/api/v1/cms/databases/${cmsId}/tables/infoCeps/rows?publish=1`,
       {
         method: "POST",
         headers: {
