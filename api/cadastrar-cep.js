@@ -27,13 +27,17 @@ export default async function handler(req, res) {
           "x-plasmic-api-cms-tokens": `${cmsId}:${cmsToken}`,
         },
         body: JSON.stringify({
-          data: {
-            cep,
-            estado,
-            cidade,
-            bairro,
-            logradouro,
-          },
+          rows: [
+            {
+              data: {
+                cep,
+                estado,
+                cidade,
+                bairro,
+                logradouro,
+              },
+            },
+          ],
         }),
       },
     );
